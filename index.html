@@ -3,99 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vansan — Stylized PBR Materials for Games</title>
-<meta name="description" content="Vansan makes stylized, seamless 2K PBR material collections for Unity, Unreal Engine, Godot and Blender. 120 materials across four environment sets.">
-<meta property="og:title" content="Vansan — Stylized PBR Materials">
-<meta property="og:description" content="120 seamless stylized PBR materials for game environments. Unity materials and demo scenes included.">
-<meta property="og:image" content="images/sheet_village.jpg">
+<title>Vansan — Stylized PBR Materials</title>
+<meta name="description" content="Vansan makes stylized, seamless 2K PBR material collections for Unity, Unreal Engine, Godot and Blender.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23110f0c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='700' fill='%23e7c27a'%3EV%3C/text%3E%3C/svg%3E">
 <style>
 :root{
   --bg:#0e0d0b;--bg-2:#161410;--card:#1b1914;--line:#2e2a23;
-  --text:#f6f1e7;--muted:#a79d8d;--faint:#6f675c;--accent:#e7c27a;--accent-2:#8fbf7a;
+  --text:#f6f1e7;--muted:#a79d8d;--faint:#6f675c;--accent:#e7c27a;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);
-  font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+  font:17px/1.65 "Segoe UI",system-ui,sans-serif}
 a{color:var(--accent);text-decoration:none}
-img{display:block;max-width:100%;height:auto}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+img{display:block;max-width:100%}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
 
-nav{position:sticky;top:0;z-index:5;background:rgba(14,13,11,.9);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-weight:700;letter-spacing:.18em;font-size:.85rem;color:var(--text)}
+nav{border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-weight:700;letter-spacing:.2em;font-size:.8rem;color:var(--text)}
 .brand span{color:var(--accent)}
-nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-nav a{color:var(--muted);font-size:.85rem;letter-spacing:.06em}
-nav a:hover{color:var(--text)}
+nav span{color:var(--faint);font-size:.8rem;letter-spacing:.08em}
 
-.hero{padding:88px 0 64px}
-.eyebrow{color:var(--accent);letter-spacing:.22em;font-size:.75rem;font-weight:650;
+header.hero{padding:84px 0 28px}
+.eyebrow{color:var(--accent);letter-spacing:.22em;font-size:.74rem;font-weight:650;
   text-transform:uppercase;margin:0 0 18px}
-h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.05;letter-spacing:-.02em;
-  font-weight:650;margin:0 0 22px;max-width:16ch}
-.lede{max-width:62ch;color:var(--muted);font-size:1.1rem;margin:0 0 36px}
-.stats{display:flex;gap:36px;flex-wrap:wrap;padding-top:8px}
-.stats b{display:block;font-size:1.7rem;font-weight:650;letter-spacing:-.02em}
-.stats span{color:var(--faint);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.02em;
+  font-weight:640;margin:0 0 22px;max-width:18ch}
+.lede{color:var(--muted);font-size:1.12rem;margin:0;max-width:62ch}
 
-.hero-art{margin-top:56px;border:1px solid var(--line);border-radius:16px;
-  overflow:hidden;background:var(--bg-2)}
-.hero-art img{width:100%}
-.hero-art figcaption{display:flex;justify-content:space-between;gap:16px;
-  padding:14px 18px;color:var(--faint);font-size:.8rem;letter-spacing:.06em}
+.facts{display:flex;gap:32px;flex-wrap:wrap;margin:40px 0 0;padding:22px 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div b{display:block;font-size:1.35rem;font-weight:640;letter-spacing:-.01em}
+.facts div span{color:var(--faint);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
 
-section{padding:72px 0}
-h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 8px}
-.section-kicker{color:var(--faint);letter-spacing:.16em;font-size:.72rem;
-  text-transform:uppercase;margin:0 0 10px}
-.section-intro{color:var(--muted);max-width:64ch;margin:0 0 36px}
+section{padding:60px 0 8px}
+h2{font-size:1.5rem;letter-spacing:-.01em;margin:0 0 8px}
+.kicker{color:var(--faint);letter-spacing:.16em;font-size:.72rem;
+  text-transform:uppercase;margin:0 0 12px}
+.intro{color:var(--muted);margin:0 0 28px;max-width:66ch}
 
-.work{display:flex;flex-direction:column;gap:28px}
-.collection{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.collection header{display:flex;justify-content:space-between;gap:24px;
-  align-items:flex-end;padding:26px 28px 20px}
-.collection h3{margin:4px 0 0;font-size:1.45rem;letter-spacing:-.01em}
-.index{color:var(--accent);font-size:.75rem;letter-spacing:.16em}
-.meta{color:var(--faint);font-size:.8rem;text-align:right;line-height:1.5}
-.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:0 16px 16px}
-.strip img{border-radius:8px;aspect-ratio:1;object-fit:cover;width:100%}
-.collection footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  padding:4px 28px 22px;color:var(--muted);font-size:.92rem}
-.tag{color:var(--accent-2);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+.collection{padding:28px 0;border-top:1px solid var(--line)}
+.collection header{display:flex;justify-content:space-between;gap:16px;
+  align-items:baseline;margin-bottom:6px}
+.index{color:var(--accent);font-size:.72rem;letter-spacing:.16em}
+h3{margin:2px 0 0;font-size:1.25rem}
+.count{color:var(--faint);font-size:.85rem}
+.collection p{margin:0 0 16px;color:var(--muted)}
+.row{display:flex;gap:10px}
+.row img{width:104px;height:104px;object-fit:cover;border-radius:8px;
+  border:1px solid var(--line)}
 
-.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.spec div{background:var(--bg-2);padding:26px 24px}
-.spec b{display:block;margin-bottom:6px;font-weight:640}
-.spec p{margin:0;color:var(--muted);font-size:.92rem}
+ol{margin:8px 0 0;padding:0;list-style:none;counter-reset:step}
+ol li{counter-increment:step;display:grid;grid-template-columns:46px 1fr;
+  gap:8px;padding:14px 0;border-top:1px solid var(--line)}
+ol li::before{content:counter(step,decimal-leading-zero);color:var(--accent);
+  font-size:.78rem;letter-spacing:.06em;padding-top:4px}
+ol li b{font-weight:630}
+ol li span{color:var(--muted)}
 
-.process{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
-.process ol{margin:0;padding:0;list-style:none;counter-reset:step}
-.process li{counter-increment:step;padding:16px 0;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:42px 1fr;gap:8px}
-.process li::before{content:counter(step,decimal-leading-zero);color:var(--accent);
-  font-size:.8rem;letter-spacing:.08em;padding-top:3px}
-.process li b{display:block}
-.process li span{color:var(--muted)}
-.disclosure{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:28px}
-.disclosure h3{margin:0 0 12px;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--accent)}
-.disclosure p{margin:0;color:var(--muted);font-size:.95rem}
+.note{margin-top:28px;padding:22px 24px;background:var(--bg-2);
+  border:1px solid var(--line);border-radius:12px;color:var(--muted);font-size:.95rem}
+.note b{color:var(--text)}
 
-footer.site{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--faint);
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem}
-footer.site b{color:var(--text);letter-spacing:.14em;font-weight:650}
+footer.site{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 56px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  color:var(--faint);font-size:.85rem}
+footer.site b{color:var(--text);letter-spacing:.16em}
 
-@media(max-width:760px){
-  nav ul{display:none}
-  .hero{padding:56px 0 40px}
-  .process{grid-template-columns:1fr;gap:28px}
-  .strip{grid-template-columns:repeat(3,1fr)}
-  .collection header,.collection footer{padding-left:18px;padding-right:18px}
-  .meta{text-align:left}
+@media(max-width:640px){
+  .row img{width:72px;height:72px}
+  header.hero{padding-top:52px}
 }
 </style>
 </head>
@@ -103,148 +80,120 @@ footer.site b{color:var(--text);letter-spacing:.14em;font-weight:650}
 <nav>
 <div class="wrap">
 <a class="brand" href="#top">VAN<span>SAN</span></a>
-<ul>
-<li><a href="#work">Collections</a></li>
-<li><a href="#spec">Specification</a></li>
-<li><a href="#process">Process</a></li>
-</ul>
+<span>MATERIAL ARTIST</span>
 </div>
 </nav>
 
 <header class="hero" id="top">
 <div class="wrap">
-<p class="eyebrow">Material artist · Unity publisher</p>
-<h1>Stylized grounds, built to tile.</h1>
-<p class="lede">Seamless PBR material collections for stylized game environments. Every set ships as 2K maps with Unity materials and a demo scene, and the same maps drop into Unreal Engine, Godot and Blender.</p>
-<div class="stats">
+<p class="eyebrow">Unity Asset Store publisher</p>
+<h1>Stylized materials for game environments.</h1>
+<p class="lede">I make seamless PBR texture collections for stylized games. Each material is a complete 2K map set, delivered with a Unity material and a demo scene, and the same maps work in Unreal Engine, Godot and Blender.</p>
+<div class="facts">
 <div><b>120</b><span>materials</span></div>
 <div><b>4</b><span>collections</span></div>
-<div><b>2K</b><span>per map</span></div>
-<div><b>8</b><span>maps each</span></div>
+<div><b>2048²</b><span>map resolution</span></div>
+<div><b>8</b><span>maps per material</span></div>
 </div>
-<figure class="hero-art">
-<img src="images/sheet_village.jpg" width="1926" height="356" alt="Six stylized village ground materials: mossy cobblestone, meadow grass, dirt, rune plaza, lava stone and snow">
-<figcaption><span>FANTASY VILLAGE GROUND</span><span>SEAMLESS · 2048 × 2048</span></figcaption>
-</figure>
 </div>
 </header>
 
-<section id="work">
+<section>
 <div class="wrap">
-<p class="section-kicker">Selected work</p>
-<h2>Four collections, one visual language.</h2>
-<p class="section-intro">Each collection is 30 unique materials. Shown below is a selection from every set; the full range is in the Unity package.</p>
-<div class="work">
+<p class="kicker">Collections</p>
+<h2>One visual language, four settings.</h2>
+<p class="intro">The four sets are designed to be used together. Below is a small preview from the free sample of each collection. Full-resolution textures are distributed only through the Unity Asset Store.</p>
 
 <article class="collection">
 <header>
-<div>
-<div class="index">01 — VILLAGE</div>
-<h3>Fantasy Village Ground</h3>
-</div>
-<div class="meta">30 materials<br>Cobble, grass, dirt, plaza, biome</div>
+<div><div class="index">01</div><h3>Fantasy Village Ground</h3></div>
+<span class="count">30 materials</span>
 </header>
-<div class="strip">
-<img src="images/p1_cobbles_01.jpg" alt="Mossy cobblestone">
-<img src="images/p1_grass_01.jpg" alt="Meadow grass with flowers">
-<img src="images/p1_dirt_01.jpg" alt="Countryside dirt road">
-<img src="images/p1_plaza_02.jpg" alt="Ancient rune plaza stone">
-<img src="images/p1_plaza_09.jpg" alt="Lava stone ground">
-<img src="images/p1_special_01.jpg" alt="Snow-covered ground">
+<p>Mossy cobblestone, meadow grass, dirt roads, carved plazas and seasonal biome floors for villages and countryside.</p>
+<div class="row">
+<img src="images/p1_cobbles_01.jpg" width="104" height="104" alt="Mossy cobblestone preview">
+<img src="images/p1_grass_01.jpg" width="104" height="104" alt="Meadow grass preview">
+<img src="images/p1_dirt_01.jpg" width="104" height="104" alt="Dirt road preview">
+<img src="images/p1_plaza_02.jpg" width="104" height="104" alt="Rune plaza preview">
+<img src="images/p1_plaza_09.jpg" width="104" height="104" alt="Lava stone preview">
 </div>
-<footer><span>Village paths, meadows, plazas and seasonal biome floors.</span><span class="tag">Free sample · 5 materials</span></footer>
 </article>
 
 <article class="collection">
 <header>
-<div>
-<div class="index">02 — SCI-FI</div>
-<h3>Sci-Fi Panels + Emissive</h3>
-</div>
-<div class="meta">30 materials<br>Panels, metal, grate, hazard</div>
+<div><div class="index">02</div><h3>Sci-Fi Panels + Emissive</h3></div>
+<span class="count">30 materials</span>
 </header>
-<div class="strip">
-<img src="images/p2_panels_01.jpg" alt="Sci-fi hull panel">
-<img src="images/p2_emissive_01.jpg" alt="Emissive circuit floor">
-<img src="images/p2_metal_06.jpg" alt="Worn metal deck">
-<img src="images/p2_grate_01.jpg" alt="Ventilation grate">
-<img src="images/p2_hazard_01.jpg" alt="Hazard marking floor">
-<img src="images/p2_special_01.jpg" alt="Special sci-fi floor">
+<p>Hull panels, glowing circuit floors, worn metal decks, ventilation grates and hazard markings. Emissive masks are included where a material glows.</p>
+<div class="row">
+<img src="images/p2_panels_01.jpg" width="104" height="104" alt="Sci-fi panel preview">
+<img src="images/p2_emissive_01.jpg" width="104" height="104" alt="Emissive floor preview">
+<img src="images/p2_metal_06.jpg" width="104" height="104" alt="Metal deck preview">
+<img src="images/p2_grate_01.jpg" width="104" height="104" alt="Grate preview">
+<img src="images/p2_special_01.jpg" width="104" height="104" alt="Special sci-fi floor preview">
 </div>
-<footer><span>Starship decks, glowing circuits, grates and hazard floors. Emissive masks included where the material glows.</span></footer>
 </article>
 
 <article class="collection">
 <header>
-<div>
-<div class="index">03 — DUNGEON</div>
-<h3>Fantasy Dungeon</h3>
-</div>
-<div class="meta">30 materials<br>Stone, brick, lava, ice, iron</div>
+<div><div class="index">03</div><h3>Fantasy Dungeon</h3></div>
+<span class="count">30 materials</span>
 </header>
-<div class="strip">
-<img src="images/p3_stone_01.jpg" alt="Cracked dungeon flagstone">
-<img src="images/p3_brick_01.jpg" alt="Mossy dungeon brick">
-<img src="images/p3_lava_01.jpg" alt="Lava obsidian floor">
-<img src="images/p3_ice_01.jpg" alt="Frozen cave floor">
-<img src="images/p3_metal_01.jpg" alt="Dark iron plate">
-<img src="images/p3_special_02.jpg" alt="Portal floor">
+<p>Cracked flagstone, mossy brick, lava obsidian, frozen caves and dark iron plates, plus floors for throne rooms and portals.</p>
+<div class="row">
+<img src="images/p3_stone_01.jpg" width="104" height="104" alt="Dungeon stone preview">
+<img src="images/p3_brick_01.jpg" width="104" height="104" alt="Dungeon brick preview">
+<img src="images/p3_lava_01.jpg" width="104" height="104" alt="Lava floor preview">
+<img src="images/p3_ice_01.jpg" width="104" height="104" alt="Ice floor preview">
+<img src="images/p3_special_02.jpg" width="104" height="104" alt="Portal floor preview">
 </div>
-<footer><span>Flagstone, brick, lava, ice and iron, plus set pieces for throne rooms and portals.</span></footer>
 </article>
 
 <article class="collection">
 <header>
-<div>
-<div class="index">04 — COURTYARD</div>
-<h3>Light Stone + Moss</h3>
-</div>
-<div class="meta">30 materials<br>Limestone, marble, moss accent</div>
+<div><div class="index">04</div><h3>Light Stone + Moss</h3></div>
+<span class="count">30 materials</span>
 </header>
-<div class="strip">
-<img src="images/p4_stone_05.jpg" alt="Pale flagstone">
-<img src="images/p4_moss_02.jpg" alt="Stone with moss in the joints">
-<img src="images/p4_stone_01.jpg" alt="Light limestone wall paving">
-<img src="images/p4_moss_05.jpg" alt="Lichen accent stone">
-<img src="images/p4_stone_04.jpg" alt="Star-inlaid courtyard stone">
-<img src="images/p4_stone_12.jpg" alt="Warm-veined light stone">
+<p>Pale flagstone, limestone and marble for courtyards and temples. Moss and lichen sit in the joints; the stone stays dominant.</p>
+<div class="row">
+<img src="images/p4_stone_05.jpg" width="104" height="104" alt="Pale flagstone preview">
+<img src="images/p4_moss_02.jpg" width="104" height="104" alt="Moss accent stone preview">
+<img src="images/p4_moss_05.jpg" width="104" height="104" alt="Lichen accent stone preview">
 </div>
-<footer><span>Pale flagstone, limestone and marble. Moss and lichen sit in the joints; the stone stays dominant.</span></footer>
 </article>
-
-</div>
 </div>
 </section>
 
-<section id="spec">
+<section>
 <div class="wrap">
-<p class="section-kicker">What you get</p>
-<h2>Ready for a production pipeline.</h2>
-<p class="section-intro">Maps are packed for the pipelines that actually get used, not dumped in a folder.</p>
-<div class="spec">
-<div><b>Eight maps, 2048²</b><p>Albedo, OpenGL normal, roughness, metalness, height, ambient occlusion, HDRP Mask Map and an ORM pack.</p></div>
-<div><b>Unity, set up</b><p>Materials use Universal Render Pipeline/Lit, tested in Unity 6. A demo scene and an offline setup guide ship with the package.</p></div>
-<div><b>Seamless, both axes</b><p>Every albedo is edge-matched and checked for horizontal and vertical tiling. No seam, no obvious repeat ghosting.</p></div>
-<div><b>Engine-agnostic maps</b><p>The same PNG set works in Unreal Engine, Godot and Blender. OpenGL normals need the green channel flipped for DirectX.</p></div>
-</div>
-</div>
-</section>
-
-<section id="process">
-<div class="wrap">
-<p class="section-kicker">Process</p>
-<h2>Generated, then finished by hand.</h2>
-<div class="process">
+<p class="kicker">Specification</p>
+<h2>Built for a production pipeline.</h2>
+<p class="intro">Every material carries the same map set, so a project can mix collections without rebuilding shaders.</p>
 <ol>
-<li><div><b>Generate</b><span>Albedo bases are produced locally with Stable Diffusion XL, under its commercial-use license.</span></div></li>
-<li><div><b>Curate</b><span>Every output is reviewed. Anatomical errors, broken reads and anything that resembles existing work are discarded.</span></div></li>
-<li><div><b>Make it tile</b><span>Seams are repaired with inpainting and edge matching until the texture repeats on both axes.</span></div></li>
-<li><div><b>Derive the maps</b><span>Height, normals, roughness, metalness and ambient occlusion are built procedurally from the finished albedo, then upscaled to 2K.</span></div></li>
+<li><div><b>Eight maps at 2048 × 2048.</b><span> Albedo, OpenGL normal, roughness, metalness, height, ambient occlusion, an HDRP mask map and a Godot ORM pack.</span></div></li>
+<li><div><b>Unity materials included.</b><span> Each set ships as a Universal Render Pipeline/Lit material, tested in Unity 6, with a demo scene and an offline setup guide.</span></div></li>
+<li><div><b>Checked for tiling.</b><span> Seams are repaired and every texture is verified on both the horizontal and the vertical axis.</span></div></li>
+<li><div><b>Not locked to one engine.</b><span> The PNG maps import directly into Unreal Engine, Godot and Blender. DirectX workflows need the normal's green channel flipped.</span></div></li>
 </ol>
-<div class="disclosure">
-<h3>AI disclosure</h3>
-<p>Albedo base textures were generated locally using Stable Diffusion XL (commercial license) in ComfyUI. All generated outputs were curated, seam-repaired (inpainting and edge matching for seamless tiling), upscaled to 2048×2048, and processed with procedurally derived PBR maps (Height, Sobel Normals, Roughness, Metalness, and Ambient Occlusion). No third-party copyrighted materials were used as source inputs.</p>
 </div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="kicker">Process</p>
+<h2>Generated first, finished by hand.</h2>
+<p class="intro">The albedo starts in a local Stable Diffusion XL workflow. Everything after that is selection and repair.</p>
+<ol>
+<li><div><b>Generate.</b><span> Albedo candidates are produced locally, under the model's commercial-use license.</span></div></li>
+<li><div><b>Curate.</b><span> Outputs with a broken read, or that resemble existing work, are thrown out.</span></div></li>
+<li><div><b>Repair.</b><span> Seams are closed with inpainting and edge matching until the texture repeats cleanly.</span></div></li>
+<li><div><b>Derive.</b><span> Height, normals, roughness, metalness and ambient occlusion are built procedurally from the finished albedo, then upscaled to 2K.</span></div></li>
+</ol>
+<div class="note">
+<b>AI disclosure.</b> Albedo base textures were generated locally using Stable Diffusion XL (commercial license) in ComfyUI. All generated outputs were curated, seam-repaired (inpainting and edge matching for seamless tiling), upscaled to 2048×2048, and processed with procedurally derived PBR maps (Height, Sobel Normals, Roughness, Metalness, and Ambient Occlusion). No third-party copyrighted materials were used as source inputs.
+</div>
+<div class="note">
+<b>About these previews.</b> The images on this page are reduced samples from the free evaluation sets. They are not the 2K source files, they are not licensed for use, and the paid collections are not published here. Full maps and Unity materials are distributed through the Unity Asset Store under its EULA.
 </div>
 </div>
 </section>
@@ -252,7 +201,7 @@ footer.site b{color:var(--text);letter-spacing:.14em;font-weight:650}
 <div class="wrap">
 <footer class="site">
 <b>VANSAN</b>
-<span>Stylized PBR materials · Unity Asset Store</span>
+<span>Stylized PBR materials</span>
 <span>© 2026 Vansan</span>
 </footer>
 </div>
