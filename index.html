@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vansan — Stylized PBR Materials</title>
+<meta name="description" content="Stylized seamless PBR material collections by Vansan for Unity, Unreal, Godot and Blender.">
+<style>
+:root{color-scheme:dark;--bg:#14120f;--card:#1e1b16;--line:#3a342b;--text:#f3efe6;--muted:#b7ad9d;--accent:#d7a15a}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,sans-serif;background:var(--bg);color:var(--text)}
+main{max-width:1040px;margin:0 auto;padding:48px 20px 72px}
+header h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:.02em}
+header p{max-width:68ch;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:36px 0}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+img{display:block;width:100%;height:auto;background:#0c0b09}
+article div{padding:16px 16px 18px}
+h2{margin:0 0 6px;font-size:1.15rem}
+article p{margin:0;color:var(--muted)}
+.note{border-top:1px solid var(--line);padding-top:22px;color:var(--muted);max-width:78ch}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p>Publisher</p>
+<h1>Vansan</h1>
+<p>Stylized, seamless PBR material collections for game environments. Each material is prepared as tileable 2K maps for Unity, Unreal Engine, Godot and Blender, with a demo scene included in the Unity packages.</p>
+</header>
+<section class="grid">
+<article>
+<img src="images/village.jpg" width="960" height="540" alt="Stylized fantasy village ground materials shown on terrain">
+<div>
+<h2>Fantasy Village Ground</h2>
+<p>30 seamless ground materials: mossy cobblestone, meadow grass, dirt roads, stone plazas and special biome floors.</p>
+</div>
+</article>
+<article>
+<img src="images/scifi.jpg" width="960" height="540" alt="Stylized sci-fi floor panels and emissive materials">
+<div>
+<h2>Sci-Fi Panels + Emissive</h2>
+<p>30 seamless sci-fi materials: starship panels, emissive circuit floors, metal decks, grates and hazard markings.</p>
+</div>
+</article>
+<article>
+<img src="images/dungeon.jpg" width="960" height="540" alt="Stylized fantasy dungeon floor materials">
+<div>
+<h2>Fantasy Dungeon</h2>
+<p>30 seamless dungeon materials: cracked flagstone, mossy brick, lava obsidian, frozen caves and dark iron plates.</p>
+</div>
+</article>
+<article>
+<img src="images/stone.jpg" width="960" height="540" alt="Stylized light stone floors with moss in the joints">
+<div>
+<h2>Light Stone + Moss</h2>
+<p>30 seamless light-stone materials: pale flagstone, limestone, marble and sunlit slabs with moss and lichen in the joints.</p>
+</div>
+</article>
+</section>
+<section class="note">
+<h2>How the textures are made</h2>
+<p>Albedo base textures were generated locally using Stable Diffusion XL (commercial license) in ComfyUI. All generated outputs were curated, seam-repaired (inpainting and edge matching for seamless tiling), upscaled to 2048x2048, and processed with procedurally derived PBR maps (Height, Sobel Normals, Roughness, Metalness, and Ambient Occlusion). No third-party copyrighted materials were used as source inputs.</p>
+<p>Collections are listed on the Unity Asset Store under the publisher name Vansan. A free five-material sample is available for the village ground collection.</p>
+</section>
+</main>
+</body>
+</html>
